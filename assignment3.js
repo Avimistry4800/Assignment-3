@@ -1,35 +1,35 @@
 //https://github.com/Avimistry4800/Assignment-3
 // #1 Kilometer to meter function
 // N.B. >> Only use Number as input.
-function kilometerToMeter(kilometer){
-    var reasult = kilometer * 1000 ;
-    if(kilometer <= 0){
-        return ("ERROR : Check the value of Kilometer you entered. Please enter a valid positive value")
+    function kilometerToMeter(kilometer){
+        var reasult = kilometer * 1000 ;
+        if(kilometer <= 0){
+            return ("ERROR : Check the value of Kilometer you entered. Please enter a valid positive value")
+        }
+        return reasult;
     }
-    return reasult;
-}
 
 // #2 budgetCalculator function 
 // in this function , if you want to buy one or two product, please give 0 as input on which product you don't want to buy.
 // give your input like this >> var variableName = (number1,number2,number3); >> number1=watch, number2=mobile ,number3=laptop ;
 // N.B. >> Only use Number as input.
 function budgetCalculator (watch,mobile,laptop){  
-    if( watch <0 ){
-        return "Error : check watch value"
+        if( watch <0 ){
+            return "Error : check watch value"
+        }
+        else if( mobile <0 ){
+        return "Error : check mobile value"
     }
-    else if( mobile <0 ){
-       return "Error : check mobile value"
-   }
-   else if ( laptop <0 ){
-       return "Error : check laptop value"
-   }
-    else {
-       var watchCost = watch * 50 ;
-       var mobileCost = mobile * 100;
-       var laptopCost = laptop *500;
-       var totalCost = watchCost + mobileCost + laptopCost ;
+    else if ( laptop <0 ){
+        return "Error : check laptop value"
     }
-    return totalCost ;
+        else {
+        var watchCost = watch * 50 ;
+        var mobileCost = mobile * 100;
+        var laptopCost = laptop *500;
+        var totalCost = watchCost + mobileCost + laptopCost ;
+        }
+        return totalCost ;
 }
 
 // #3 hotelCost function
@@ -65,12 +65,12 @@ function hotelCost (dayCount){
 // Here i'm using #array as paramiter of megaFriend. #longestName is used for store the vallue of the #array & finaly it will store the longest 1st string in the array by using loop & condition.
 // Plese make sure you input your items as an array like this var input = ["" , "" ,""];like this  
 // N.B. >> Only use array as input.
-function megaFriend(array) {
-    var longestName = array[0];
-    for (i = 0; i < array.length; i++) {
-      if (array[i].length > longestName.length) {
-        longestName = array[i];
-      }
+    function megaFriend(array) {
+        var longestName = array[0];
+        for (i = 0; i < array.length; i++) {
+        if (array[i].length > longestName.length) {
+            longestName = array[i];
+        }
+        }
+        return longestName;
     }
-    return longestName;
-  }
