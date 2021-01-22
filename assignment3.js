@@ -16,6 +16,9 @@ function budgetCalculator (watch,mobile,laptop){
 }
 
 // #3 hotelCost function
+// Here cost of hotel rent (1-10 days cost = 100/day ; 11-20 days = 80/day ; 20-remaining days = 50/day)
+// Here firstPackage = 1st 10 days, secondPackage = 11-20 number days & thirdPackage = (remaining days after 1'st 20 days)
+
 function hotelCost (dayCount){
     var totalCost = 0;
     if (dayCount <= 10 ){
@@ -30,9 +33,22 @@ function hotelCost (dayCount){
     else {
         var firstPackage =10 * 100;
         var secondPackage = 10 * 80;
-        var remainingDays = dayCount -20;
+        var remainingDays = dayCount - 20;
         var thirdPackage = remainingDays *50 ;
         totalCost = firstPackage + secondPackage + thirdPackage ;
     }
     return totalCost
 }
+
+//megaFriend function
+// Here i'm using #array as paramiter of megaFriend. #longestName is used for store the vallue of the #array & finaly it will store the longest 1st string in the array by using loop & condition.
+
+function megaFriend(array) {
+    var longestName = array[0];
+    for (i = 0; i < array.length; i++) {
+      if (array[i].length > longestName.length) {
+        longestName = array[i];
+      }
+    }
+    return longestName;
+  }
